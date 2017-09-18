@@ -8,7 +8,12 @@ typedef struct Node
 	struct Node *next;
 }NODE, *pNODE;
 
+
 void PrintList(pNODE pHead);
+pNODE CreateNewNode();
+
 pNODE CreateList(void);
 pNODE HeadInsertNode(pNODE pHead, int data);
 pNODE HeadDelNode(pNODE pHead);
+pNODE LocalInsertNode(pNODE pHead, int locNum, int data);
+pNODE LocalDelNode(pNODE pHead, int locNum);
