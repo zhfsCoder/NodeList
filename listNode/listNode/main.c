@@ -20,6 +20,7 @@ int main()
 	PrintList(p);
 	LocalDelNode(p, 0);
 	PrintList(p);
+	SearchList(p, 10);
 
 	getchar();
 	return 0;

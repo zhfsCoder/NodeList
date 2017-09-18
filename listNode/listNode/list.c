@@ -139,6 +139,7 @@ pNODE LocalDelNode(pNODE pHead, int locNum)
 			if(NULL == pBefDel->next)
 			{
 				printf("要删除的位置为空！\n");
+				return ;
 			}
 			else
 			{
@@ -150,8 +151,33 @@ pNODE LocalDelNode(pNODE pHead, int locNum)
 		pMove = pMove->next;
 		countNum++;
 	}
-		if(countNum < locNum || locNum <= 0)
+	if(countNum < locNum || locNum <= 0)
 	{
 		printf("删除位置不存在！\n");
+	}
+}
+
+pNODE SearchList(pNODE pHead, int locNum)
+{
+	int countNum = 0;
+	pNODE pMove = pHead;
+	if(NULL == pMove)
+	{
+		printf("链表为空！");
+	}
+	while(NULL != pMove->next)
+	{
+		if(countNum+1 == locNum)
+		{
+			printf("查询到数据为：%d \n", pMove->next->data);
+			return;
+		}
+
+		pMove = pMove->next;
+		countNum++;
+	}
+	if(countNum < locNum || locNum<=0)
+	{
+		printf("查找位置不对！");
 	}
 }

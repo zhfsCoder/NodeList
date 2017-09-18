@@ -17,3 +17,4 @@ pNODE HeadInsertNode(pNODE pHead, int data);
 pNODE HeadDelNode(pNODE pHead);
 pNODE LocalInsertNode(pNODE pHead, int locNum, int data);
 pNODE LocalDelNode(pNODE pHead, int locNum);
+pNODE SearchList(pNODE pHead, int locNum);
